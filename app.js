@@ -1,9 +1,9 @@
 const express=require('express');
+
 const app=express();
 
-app.get("/",(req,res)=>{
+const postRoutes=require('./routes/post');
 
-    res.send("Hello  world hiiiiiii")
-});
+app.get("/",postRoutes.getPosts);
 
 app.listen(4000)
